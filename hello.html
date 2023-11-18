@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="fedora dash to dock" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        const jokes = [
+            'What falls, but never needs a bandage? The rain.',
+            "I was going to tell you a joke about boxing but I forgot the punch line.",
+            "I'm not a fan of spring cleaning. Let's be honest, I'm not into summer, fall, or winter cleaning either.",
+            "Why did the egg hide? It was a little chicken.",
+            "What did the dirt say to the rain? If you keep this up, my name will be mud!",
+            "Why couldn't the sunflower ride its bike? It lost its petals.",
+            "What's an egg's favorite vacation spot? New Yolk City.",
+            "I ate a sock yesterday. It was very time-consuming.",
+            "What kind of candy do astronauts like? Mars bars.",
+            "I wanted to buy some camo pants but couldn't find any.",
+        ];
+
+
+        function showRandomJoke() {
+            const displayJoke = document.getElementById("display_joke");
+            const randomNumber = Math.floor(Math.random() * jokes.length)
+            displayJoke.innerText = jokes[randomNumber]
+
+
+            const jokeButton = document.getElementById("submit-button");
+            jokeButton.innerText = "Tell me another joke"
+        }
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 2em;
+            background-color: lightgrey;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2em;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #display_joke {
+            border: forestgreen 1px dotted;
+            padding: 1em;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .submit-button {
+            width: 100%;
+            background-color: forestgreen;
+            color: white;
+            padding: 1em;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="display_joke">Welcome, bla bla bla</div>
+        <button id="submit-button" class="submit-button" onclick="showRandomJoke()">Tell me a joke</button>
+    </div>
+</body>
+
+</html>
